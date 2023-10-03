@@ -2,7 +2,6 @@
 const detailsForm = document.querySelector("#destination_details_form");
 detailsForm.addEventListener("submit", handleFormSubmit);
 console.log(detailsForm.length);
-
 function handleFormSubmit(event) {
     event.preventDefault();
     const destName = event.target.elements["name"].value;  //accessing the form elements by name
