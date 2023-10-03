@@ -29,7 +29,6 @@ function createDestinationCard(name, location, PhotoURL, description) {
 
     const img = document.createElement("img");
     img.setAttribute("alt", name);
-
     const constPhotoURL = "images/signpost.jpg";
 
     function isValidURL(url) {
@@ -68,8 +67,11 @@ function createDestinationCard(name, location, PhotoURL, description) {
         cardBody.appendChild(cardText);
     }
 
+    //innerText property sets or returns the text content of the specified node
+
     const cardDeleteButton = document.createElement("button");
-    cardDeleteButton.innerText = "Remove";
+    cardDeleteButton.textContent = "Remove";
+    //textContent property is a standard property, whereas innerText is not
 
     cardDeleteButton.addEventListener("click", removeDestination)
     cardBody.appendChild(cardDeleteButton);
