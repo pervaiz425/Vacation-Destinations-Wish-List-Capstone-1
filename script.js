@@ -2,6 +2,16 @@
 const detailsForm = document.querySelector("#destination_details_form");
 detailsForm.addEventListener("submit", handleFormSubmit);
 console.log(detailsForm.length);
+
+//Strategy:
+//First of all, I am accessing the form elements by name. then accessing the form elements.
+//I am creating a destination card by using the values entered in the form.
+//Then I am making the form value to null.
+//Then I am appending the destination card to the destination container.
+//If the destination container is empty, I am displaying the title.
+//Checking if the url of image is valid or not. If it's valid, I am displaying the image, 
+//otherwise displaying the default image.
+
 function handleFormSubmit(event) {
     event.preventDefault();
     const destName = event.target.elements["name"].value;  //accessing the form elements by name
